@@ -6,6 +6,7 @@ import 'app.dart';
 
 // TODO(codelab user): Get API key
 //const clientId = 'YOUR_CLIENT_ID';
+//https://firebase.google.com/codelabs/firebase-auth-in-flutter-apps#3
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

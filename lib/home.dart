@@ -12,7 +12,10 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Image.asset('dash.png'),
+            AspectRatio(
+              aspectRatio: 4,
+              child: Image.asset('dash.png'),
+            ),
             Text(
               'Welcome!',
               style: Theme.of(context).textTheme.displaySmall,
