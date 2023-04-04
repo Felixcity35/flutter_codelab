@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
 
 import 'home.dart';
+import 'main.dart';
 
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});
@@ -14,7 +15,10 @@ class AuthGate extends StatelessWidget {
         builder: ((context, snapshot) {
           if (!snapshot.hasData) {
             return SignInScreen(
-              providerConfigs: const [EmailProviderConfiguration()],
+              providerConfigs: const [
+                EmailProviderConfiguration(),
+                GoogleProviderConfiguration(clientId: WebclientId)
+              ],
               headerBuilder: (context, constraints, shrinkOffset) {
                 return Padding(
                   padding: const EdgeInsets.all(20),
